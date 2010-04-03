@@ -116,6 +116,60 @@
 				"stylesheets"	: [],
 				"images"		: []
 			}
+		},
+		
+		"section1":
+		{
+			"controller": "${SECTIONS}/section1.js",
+			
+			"dependencies":
+			{
+				"javascripts"	:
+				[
+					{
+						"name"					: "map",
+						"local_source"			: "${CLASSES}/map1.js"
+					},
+					{
+						"name"					: "circuit",
+						"local_source"			: "${CLASSES}/circuit1.js"
+					},
+					{
+						"name"					: "activity",
+						"local_source"			: "${CLASSES}/activity1.js"
+					}
+				],
+				
+				"stylesheets"	: [],
+				"images"		: []
+			}
+		},
+		
+		"section2":
+		{
+			"controller": "${SECTIONS}/section2.js",
+			
+			"dependencies":
+			{
+				"javascripts"	:
+				[
+					{
+						"name"					: "map",
+						"local_source"			: "${CLASSES}/map2.js"
+					},
+					{
+						"name"					: "circuit",
+						"local_source"			: "${CLASSES}/circuit2.js"
+					},
+					{
+						"name"					: "activity",
+						"local_source"			: "${CLASSES}/activity2.js"
+					}
+				],
+				
+				"stylesheets"	: [],
+				"images"		: []
+			}
 		}
 	}
 }

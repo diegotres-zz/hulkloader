@@ -53,7 +53,25 @@ var HulkLoader = function(){
 			console.log(data);
 			console.log('current section: ' + _self.current_section);
 		}catch(e){}
-		
+	};
+	
+	
+	/**
+	 * Load CSS
+	 */
+	this.loadCSS = function(url) {
+		var stylesheet = document.createElement('link');
+		stylesheet.rel = 'stylesheet';
+		stylesheet.type = 'text/css';
+		stylesheet.href =  url;
+		_self.appendCSS(stylesheet);
+	};
+	
+	/**
+	 * Append CSS
+	 */
+	this.appendCSS = function(stylesheet) {
+		document.getElementsByTagName('head')[0].appendChild(stylesheet);
 	};
 	
 	
@@ -104,7 +122,7 @@ var HulkLoader = function(){
 			xhrObj = new XMLHttpRequest();
 		} 
 		catch(e){
-			var progid = ['MSXML2.XMLHTTP.5.0', 'MSXML2.XMLHTTP.4.0', 'MSXML2.XMLHTTP.3.0', 'MSXML2.XMLHTTP', 'Microsoft.XMLHTTP'];
+			var progid = ['MSXML2.XMLHTTP.6.0', 'MSXML2.XMLHTTP.3.0', 'MSXML2.XMLHTTP', 'Microsoft.XMLHTTP'];
 			for ( var i=0; i < progid.length; ++i ) { 
 				try {
 					xhrObj = new ActiveXObject(progid[i]); 
