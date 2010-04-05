@@ -6,11 +6,10 @@
 	
 	"config":
 	{
-		"environment"					: "development",
 		"debug"							: true,
 		"debug_options"					: [ "log" , "info" , "error" ],
-		"dependencies_use_cdn"			: true,
-		"dependencies_block_content"	: true
+		"javascripts_use_cdn"			: false,
+		"javascripts_use_minified_file"	: false
 	},
 	
 	
@@ -25,7 +24,8 @@
 		"CLASSES"		: "/static/js/classes",
 		"SECTIONS"		: "/static/js/sections",
 		"DROAPPS"		: "/static/js/droapps",
-		"IMG"			: "/static/img"
+		"IMG"			: "/static/img",
+		"CSS"			: "/static/css"
 	},
 	
 	
@@ -35,52 +35,51 @@
 	{
 		
 		
+		
 		"javascripts"	:
-		{
-			"load_before":
-			[
-				{
-					"name"					: "jQuery",
-					"local_source"			: "${LIBS}/jquery-1.4.2.js",
-					"local_minified"		: "${LIBS}/jquery-1.4.2.min.js",
-					"cdn_source"			: "http://code.jquery.com/jquery-1.4.2.js",
-					"cdn_minified"			: "http://code.jquery.com/jquery-1.4.2.min.js"
-				}
-			],
-			
-			"load_after":
-			[
-				{
-					"name"					: "swfobject",
-					"local_source"			: "${LIBS}/swfobject-2.2.js",
-					"local_minified"		: "${LIBS}/swfobject-2.2.min.js",
-					"cdn_source"			: "http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject_src.js",
-					"cdn_minified"			: "http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"
-				}
-			]
-		},
+		[
+			{
+				"name"					: "jQuery",
+				"local_source"			: "${LIBS}/jquery-1.4.2.js",
+				"local_minified"		: "${LIBS}/jquery-1.4.2.min.js",
+				"cdn_source"			: "http://code.jquery.com/jquery-1.4.2.js",
+				"cdn_minified"			: "http://code.jquery.com/jquery-1.4.2.min.js"
+			},
+			{
+				"name"					: "Mootools-Core",
+				"local_source"			: "${LIBS}/mootools-1.2.4-core.js",
+				"local_minified"		: "${LIBS}/mootools-1.2.4-core-min.js",
+				"cdn_source"			: "http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools.js",
+				"cdn_minified"			: "http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js"
+			},
+			{
+				"name"					: "Mootools-More",
+				"local_source"			: "${LIBS}/mootools.more.assets.js",
+				"local_minified"		: "${LIBS}/mootools.more.assets-min.js"
+			},
+			{
+				"name"					: "Mootools-More",
+				"local_source"			: "${LIBS}/modernizr-1.1.js",
+				"local_minified"		: "${LIBS}/modernizr-1.1.min.js"
+			}
+		],
 		
 		
 		
-		"stylesheets"	: [],
+		"stylesheets"	: 
+		[
+			"${CSS}/stylesheet1.css",
+			"${CSS}/stylesheet2.css"
+		],
 		
 		
 		
 		"images"	:
-		{
-			"load_before":
-			[
-				"${IMG}/main-logo.jpg",
-				"${IMG}/bg-page.jpg",
-				"${IMG}/bg-header.gif"
-			],
-			
-			"load_after":
-			[
-				"${IMG}/bg-popup.jpg",
-				"${IMG}/icon-popup.png"
-			]
-		}
+		[
+			"${IMG}/main-logo.jpg",
+			"${IMG}/bg-page.jpg",
+			"${IMG}/bg-header.gif"
+		]
 		
 		
 		
@@ -113,62 +112,16 @@
 					}
 				],
 				
-				"stylesheets"	: [],
-				"images"		: []
-			}
-		},
-		
-		"section1":
-		{
-			"controller": "${SECTIONS}/section1.js",
-			
-			"dependencies":
-			{
-				"javascripts"	:
+				"stylesheets"	: 
 				[
-					{
-						"name"					: "map",
-						"local_source"			: "${CLASSES}/map1.js"
-					},
-					{
-						"name"					: "circuit",
-						"local_source"			: "${CLASSES}/circuit1.js"
-					},
-					{
-						"name"					: "activity",
-						"local_source"			: "${CLASSES}/activity1.js"
-					}
+					"${CSS}/stylesheet3.css",
+					"${CSS}/stylesheet4.css"
 				],
 				
-				"stylesheets"	: [],
-				"images"		: []
-			}
-		},
-		
-		"section2":
-		{
-			"controller": "${SECTIONS}/section2.js",
-			
-			"dependencies":
-			{
-				"javascripts"	:
+				"images"		: 
 				[
-					{
-						"name"					: "map",
-						"local_source"			: "${CLASSES}/map2.js"
-					},
-					{
-						"name"					: "circuit",
-						"local_source"			: "${CLASSES}/circuit2.js"
-					},
-					{
-						"name"					: "activity",
-						"local_source"			: "${CLASSES}/activity2.js"
-					}
-				],
-				
-				"stylesheets"	: [],
-				"images"		: []
+					
+				]
 			}
 		}
 	}
