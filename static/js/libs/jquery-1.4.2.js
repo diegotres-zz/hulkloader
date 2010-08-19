@@ -6238,7 +6238,3 @@ jQuery.each([ "Height", "Width" ], function( i, name ) {
 window.jQuery = window.$ = jQuery;
 
 })(window);
-
-
-
-console.log('1 - jquery     ');

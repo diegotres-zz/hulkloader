@@ -4327,6 +4327,3 @@ Request.JSON = new Class({
 	}
 
 });
-
-
-console.log('2 - mootools     ');

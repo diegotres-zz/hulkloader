@@ -150,6 +150,3 @@ var Asset = {
 	}
 
 };
-
-
-console.log('3 - mootoools assets     ');
