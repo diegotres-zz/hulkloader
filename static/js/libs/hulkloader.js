@@ -85,7 +85,7 @@ var HulkLoader = function(){
     this.img =
     {
         load: function() {
-            console.log('img')
+            // console.log('img')
         }
     };
     
