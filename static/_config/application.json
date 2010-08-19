@@ -1,128 +1,128 @@
 {
-	"application_name"	: "droapps /// Do the road for the apps.",
-	
-	
-	
-	
-	"config":
-	{
-		"debug"							: true,
-		"debug_options"					: [ "log" , "info" , "error" ],
-		"javascripts_use_cdn"			: false,
-		"javascripts_use_minified_file"	: false
-	},
-	
-	
-	
-	
-	"global_variables":
-	{
-		"BASE"			: "",
-		"ASSETS"		: "/static",
-		"JS"			: "/static/js",
-		"LIBS"			: "/static/js/libs",
-		"CLASSES"		: "/static/js/classes",
-		"SECTIONS"		: "/static/js/sections",
-		"DROAPPS"		: "/static/js/droapps",
-		"IMG"			: "/static/img",
-		"CSS"			: "/static/css"
-	},
-	
-	
-	
-	
-	"global_dependencies":
-	{
-		
-		
-		
-		"javascripts"	:
-		[
-			{
-				"name"					: "jQuery",
-				"local_source"			: "${LIBS}/jquery-1.4.2.js",
-				"local_minified"		: "${LIBS}/jquery-1.4.2.min.js",
-				"cdn_source"			: "http://code.jquery.com/jquery-1.4.2.js",
-				"cdn_minified"			: "http://code.jquery.com/jquery-1.4.2.min.js"
-			},
-			{
-				"name"					: "Mootools-Core",
-				"local_source"			: "${LIBS}/mootools-1.2.4-core.js",
-				"local_minified"		: "${LIBS}/mootools-1.2.4-core-min.js",
-				"cdn_source"			: "http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools.js",
-				"cdn_minified"			: "http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js"
-			},
-			{
-				"name"					: "Mootools-More",
-				"local_source"			: "${LIBS}/mootools.more.assets.js",
-				"local_minified"		: "${LIBS}/mootools.more.assets-min.js"
-			},
-			{
-				"name"					: "Mootools-More",
-				"local_source"			: "${LIBS}/modernizr-1.1.js",
-				"local_minified"		: "${LIBS}/modernizr-1.1.min.js"
-			}
-		],
-		
-		
-		
-		"stylesheets"	: 
-		[
-			"${CSS}/stylesheet1.css",
-			"${CSS}/stylesheet2.css"
-		],
-		
-		
-		
-		"images"	:
-		[
-			"${IMG}/main-logo.jpg",
-			"${IMG}/bg-page.jpg",
-			"${IMG}/bg-header.gif"
-		]
-		
-		
-		
-	},
-	
-	
-	
-	
-	"sections":
-	{
-		"home":
-		{
-			"controller": "${SECTIONS}/home.js",
-			
-			"dependencies":
-			{
-				"javascripts"	:
-				[
-					{
-						"name"					: "map",
-						"local_source"			: "${CLASSES}/map.js"
-					},
-					{
-						"name"					: "circuit",
-						"local_source"			: "${CLASSES}/circuit.js"
-					},
-					{
-						"name"					: "activity",
-						"local_source"			: "${CLASSES}/activity.js"
-					}
-				],
-				
-				"stylesheets"	: 
-				[
-					"${CSS}/stylesheet3.css",
-					"${CSS}/stylesheet4.css"
-				],
-				
-				"images"		: 
-				[
-					
-				]
-			}
-		}
-	}
+    "application_name"  : "droapps /// Do the road for the apps.",
+    
+    
+    
+    
+    "config":
+    {
+        "debug"                         : true,
+        "debug_options"                 : [ "log" , "info" , "error" ],
+        "javascripts_use_cdn"           : false,
+        "javascripts_use_minified_file" : false
+    },
+    
+    
+    
+    
+    "global_variables":
+    {
+        "BASE"          : "",
+        "ASSETS"        : "/static",
+        "JS"            : "/static/js",
+        "LIBS"          : "/static/js/libs",
+        "CLASSES"       : "/static/js/classes",
+        "SECTIONS"      : "/static/js/sections",
+        "DROAPPS"       : "/static/js/droapps",
+        "IMG"           : "/static/img",
+        "CSS"           : "/static/css"
+    },
+    
+    
+    
+    
+    "global_dependencies":
+    {
+        
+        
+        
+        "javascripts"   :
+        [
+            {
+                "name"                  : "jQuery",
+                "local_source"          : "${LIBS}/jquery-1.4.2.js",
+                "local_minified"        : "${LIBS}/jquery-1.4.2.min.js",
+                "cdn_source"            : "http://code.jquery.com/jquery-1.4.2.js",
+                "cdn_minified"          : "http://code.jquery.com/jquery-1.4.2.min.js"
+            },
+            {
+                "name"                  : "Mootools-Core",
+                "local_source"          : "${LIBS}/mootools-1.2.4-core.js",
+                "local_minified"        : "${LIBS}/mootools-1.2.4-core-min.js",
+                "cdn_source"            : "http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools.js",
+                "cdn_minified"          : "http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js"
+            },
+            {
+                "name"                  : "Mootools-More",
+                "local_source"          : "${LIBS}/mootools.more.assets.js",
+                "local_minified"        : "${LIBS}/mootools.more.assets-min.js"
+            },
+            {
+                "name"                  : "Mootools-More",
+                "local_source"          : "${LIBS}/modernizr-1.1.js",
+                "local_minified"        : "${LIBS}/modernizr-1.1.min.js"
+            }
+        ],
+        
+        
+        
+        "stylesheets"   :
+        [
+            "${CSS}/stylesheet1.css",
+            "${CSS}/stylesheet2.css"
+        ],
+        
+        
+        
+        "images"        :
+        [
+            "${IMG}/main-logo.jpg",
+            "${IMG}/bg-page.jpg",
+            "${IMG}/bg-header.gif"
+        ]
+        
+        
+        
+    },
+    
+    
+    
+    
+    "sections":
+    {
+        "home":
+        {
+            "controller": "${SECTIONS}/home.js",
+            
+            "dependencies":
+            {
+                "javascripts"   :
+                [
+                    {
+                        "name"                  : "map",
+                        "local_source"          : "${CLASSES}/map.js"
+                    },
+                    {
+                        "name"                  : "circuit",
+                        "local_source"          : "${CLASSES}/circuit.js"
+                    },
+                    {
+                        "name"                  : "activity",
+                        "local_source"          : "${CLASSES}/activity.js"
+                    }
+                ],
+                
+                "stylesheets"   : 
+                [
+                    "${CSS}/stylesheet3.css",
+                    "${CSS}/stylesheet4.css"
+                ],
+                
+                "images"        : 
+                [
+                    
+                ]
+            }
+        }
+    }
 }
